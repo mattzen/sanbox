@@ -5,3 +5,5 @@
 /.vs
 /CSharpSandbox/bin/Debug/net6.0
 /CSharpSandbox/obj
+CSharpSandbox/python/sandbox.py
+CSharpSandbox/python/__pycache__/recursion.cpython-39.pyc
