@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -11,6 +12,16 @@ namespace CSharpSandbox
     {
         static void Main(string[] args)
         {
+
+            LeetCode leet = new LeetCode();
+
+            int[] arr1 = new int[] {1,2,3,0,0,0};
+            int[] arr2 = new int[] { 2, 5, 6 };
+
+
+
+            leet.Solution88_1(arr1, 3, arr2, 3);
+
 
 
             Backtracking b = new Backtracking();
@@ -42,7 +53,32 @@ namespace CSharpSandbox
 
     }
 
-    
+
+    public class LeetCode
+    {
+      
+        public void Solution88_1(int[] nums1, int m, int[] nums2, int n)
+        {
+            for (int i = 0; i < nums2.Length; i++)
+            {
+                nums1[i+m] = nums2[i];
+            }
+            Array.Sort(nums1);
+        }
+
+        public void Solution88_2(int[] nums1, int m, int[] nums2, int n)
+        {
+            int[] temp = new int[m + n];
+
+            if(m > n)
+            {
+
+            }
+   
+        }
+
+    }
+
 
 
 
