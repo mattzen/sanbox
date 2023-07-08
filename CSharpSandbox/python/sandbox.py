@@ -1,7 +1,7 @@
 def addTwoNumbers(someNumber : int) -> None:
     print(f'Adding two numbers : {someNumber}')
 
-def SumOfDigits(num):
+def SumOfDigits(num : int) -> int:
     num = str(num)
     if len(num) == 1:
         return int(num)
