@@ -1,7 +1,8 @@
-def addTwoNumbers():
-    print("Adding two numbers")
-    
-    
+def addTwoNumbers(someNumber : int) -> None:
+    print(f'Adding two numbers : {someNumber}')
+
+
+ 
     
 if __name__ == "__main__":
-    addTwoNumbers()
+    addTwoNumbers(123)
