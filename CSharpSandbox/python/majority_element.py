@@ -1,6 +1,5 @@
 import math
 
-
 class Solution:
     def majorityElement1(nums):
         result = {} 
@@ -38,4 +37,5 @@ class Solution:
     
     def majorityElement4(nums):
         nums.sort()
-        return nums[math.floor(len(nums)/2)] 
+        return nums[math.floor(len(nums)/2)]
+    
