@@ -16,22 +16,16 @@ def sliding_window(elements, window_size):
         print(elements[i:i+window_size])  
         
 
-def smallest_length(elements, k):
-    if(len(elements)< 3):
-        return -1   
-    head = 0
-    rear = 1
-    min_length = -1
-    current_sum = elements[head] + elements[rear]
-    while(rear < len(elements)):
-        while(current_sum != k):
-        
-            if(min_length > rear - head + 1):
-                min_length = rear - head + 1
-        
-            
-            
-    return min_length
+def minSubArrayLen(nums, s):
+        head, rear, current_total, min_length = 0 , 0 , 0, len(nums) + 1
+        while rear < len(nums):
+            current_total += nums[rear]
+            rear += 1
+            while current_total >= s:
+                min_length = min(min_length, rear - head)
+                current_total -= nums[head]
+                head += 1
+        return min_length if min_length != len(nums) + 1 else 0
             
 
 if __name__ == "__main__":
@@ -50,4 +44,4 @@ if __name__ == "__main__":
     #sliding_window([1,2,3,4,5,6,7,8], 3)
     #d = Dog("Kensai", 10)
     #print(d.breed)
-    print(smallest_length([2,3,1,2,4,3], 7))
+    print(minSubArrayLen([2,3,1,2,4,3], 7))
