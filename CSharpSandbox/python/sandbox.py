@@ -5,19 +5,9 @@ from majority_element import *
 from typing import List
 import re
 
-
 def swapPositions(list, pos1, pos2):
     list[pos1], list[pos2] = list[pos2], list[pos1]
     return list
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right   
-        
-    #def maxDepth(self, root: Optional[TreeNode]) -> int:
-     #   return 1
 
 def sliding_window(elements, window_size):   
     if len(elements) <= window_size:
