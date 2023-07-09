@@ -57,7 +57,27 @@ def lengthOfLastWord(s: str) -> int:
     result = re.findall(r"\w+", s)
     return len(result[-1])
     
-    
+def canJump(nums: List[int]) -> bool:
+    ctr = 0
+
+    while(ctr + nums[ctr] <= len(nums)):
+            if(ctr + nums[ctr] == len(nums) - 1):
+                return True
+            if(len(nums) == 1):
+                return True
+            if(ctr + 1 > len(nums) -1):
+                return True
+            ctr +=1
+    return False
+
+def reverseWords(s: str) -> str:
+    result = re.findall(r"\w+", s)
+    last_index = len(result) - 1
+    final_sentence = result[last_index]
+    while(last_index > 0):
+        last_index -= 1
+        final_sentence += " " + result[last_index]
+    return final_sentence
     
 if __name__ == "__main__":
     #print(SumOfDigits(123456767))
@@ -68,4 +88,5 @@ if __name__ == "__main__":
     #print(is_palindrome("amanaplanacanalpanama"))
     #print(is_palindrome("A man, a plan, a canal: Panama"))
     #print(is_palindrome("ab_a"))
-    print(lengthOfLastWord("   fly me   to   the moon  "))
+    #print(lengthOfLastWord("   fly me   to   the moon  "))
+    print(reverseWords("the sky is blue"))
