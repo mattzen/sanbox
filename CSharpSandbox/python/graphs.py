@@ -22,7 +22,7 @@ class SolutionNumOfIslands:
                     q.append((x, y))
                     grid[x][y] = '2'  # Mark '2' as visited
 
-            ans = 0
+        ans = 0
 
         for i in range(m):
             for j in range(n):
@@ -43,11 +43,11 @@ class SolutionNumOfIslands:
             if grid[i][j] != '1':
                 return
 
-        grid[i][j] = '2'  # Mark '2' as visited
-        dfs(i + 1, j)
-        dfs(i - 1, j)
-        dfs(i, j + 1)
-        dfs(i, j - 1)
+            grid[i][j] = '2'  # Mark '2' as visited
+            dfs(i + 1, j)
+            dfs(i - 1, j)
+            dfs(i, j + 1)
+            dfs(i, j - 1)
 
         ans = 0
 
@@ -58,3 +58,14 @@ class SolutionNumOfIslands:
                     ans += 1
 
         return ans
+
+grid = [
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+]
+
+sol = SolutionNumOfIslands()
+#print(sol.numIslandsDFS(grid))
+print(sol.numIslandsBFS(grid))
