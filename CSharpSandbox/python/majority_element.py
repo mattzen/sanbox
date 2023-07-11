@@ -1,6 +1,6 @@
 import math
 
-class Solution:
+class SolutionMajorityElement:
     def majorityElement1(nums):
         result = {} 
         for element in nums: 
