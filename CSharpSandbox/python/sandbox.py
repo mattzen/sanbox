@@ -26,7 +26,33 @@ def minSubArrayLen(nums, s):
                 current_total -= nums[head]
                 head += 1
         return min_length if min_length != len(nums) + 1 else 0
+ 
+ #ex 23   
+def phoneNumbers(digits):
+    d = {
+            "2" : "abc",
+            "3" : "def",
+            "4" : "ghi",
+            "5" : "jkl",
+            "6" : "mno",
+            "7" : "pgrs",
+            "8" : "tuv",
+            "9" : "wxyz"
+        }
+    
+    result = []
+    def backtrack(index, curStr):
+        if(len(curStr) == len(digits)):
+            result.append(curStr)
+            return
+        for i in d[digits[index]]:
+            backtrack(index + 1, curStr + i)
             
+    if(digits):
+        backtrack(0, "")
+    return result
+                
+
 
 if __name__ == "__main__":
     #print(SumOfDigits(123456767))
@@ -44,4 +70,5 @@ if __name__ == "__main__":
     #sliding_window([1,2,3,4,5,6,7,8], 3)
     #d = Dog("Kensai", 10)
     #print(d.breed)
-    print(minSubArrayLen([2,3,1,2,4,3], 7))
+    #print(minSubArrayLen([2,3,1,2,4,3], 7))
+    print(phoneNumbers("23"))
