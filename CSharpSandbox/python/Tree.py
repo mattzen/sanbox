@@ -57,7 +57,23 @@ class Solution(object):
         return level
     
     def averageOfLevels(self, root : TreeNode):
-        return root.left.val
+        queue = deque([root])
+        result = [root.val]
+        current_val = 0
+        current_ctr = 0
+        while queue:
+            for i in range(len(queue)):
+                node = queue.popleft()
+                current_val += node.val
+                current_ctr = i
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            result.append(current_val/(current_ctr + 1))
+            current_val = 0
+        return result
+
         
 
 # Test cases
@@ -70,8 +86,6 @@ tree.right.left = TreeNode(15)
 tree.right.right = TreeNode(7)
 
 print(sol.averageOfLevels(tree))
-
-print("done")
 
 assert sol.max_depth_recursive(tree) == 3
 assert sol.max_depth_bfs(tree) == 3
