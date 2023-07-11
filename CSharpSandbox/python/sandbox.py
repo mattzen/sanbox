@@ -1,4 +1,5 @@
 from recursion import *
+from two_sum import *
 from dog import *
 from other_problems import *
 from majority_element import *
@@ -16,6 +17,7 @@ def sliding_window(elements, window_size):
         print(elements[i:i+window_size])  
         
 
+     
 
 
 if __name__ == "__main__":
@@ -35,4 +37,5 @@ if __name__ == "__main__":
     #d = Dog("Kensai", 10)
     #print(d.breed)
     #print(minSubArrayLen([2,3,1,2,4,3], 7))
-    print(phoneNumbers("23"))
+    #print(phoneNumbers("2345"))
+    print(twoSum2([1,2,3,4,55,7], 8))

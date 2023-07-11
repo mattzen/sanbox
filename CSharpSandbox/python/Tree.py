@@ -1,6 +1,5 @@
 from collections import deque
 
-
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -56,7 +55,10 @@ class Solution(object):
                 stack.append((node.left, depth + 1))
                 stack.append((node.right, depth + 1))
         return level
-
+    
+    def averageOfLevels(self, root : TreeNode):
+        return root.left.val
+        
 
 # Test cases
 sol = Solution()
@@ -66,6 +68,10 @@ tree.left = TreeNode(9)
 tree.right = TreeNode(20)
 tree.right.left = TreeNode(15)
 tree.right.right = TreeNode(7)
+
+print(sol.averageOfLevels(tree))
+
+print("done")
 
 assert sol.max_depth_recursive(tree) == 3
 assert sol.max_depth_bfs(tree) == 3
