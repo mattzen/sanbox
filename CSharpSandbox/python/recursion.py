@@ -52,7 +52,7 @@ class SolutionStairs:
             if(index > n):
                 return 0
             for i in range (n):
-                lookup[index] = recursiveStairs(n, index + 1) + recursiveStairs(n, index + 2) + recursiveStairs(n, index + 3) + recursiveStairs(n, index + 4)
+                lookup[index] = recursiveStairs(n, index + 1) + recursiveStairs(n, index + 2)
                 return lookup[index]
         return recursiveStairs(n, 0)
     
@@ -65,8 +65,19 @@ class SolutionStairs:
             for i in range (n):
                 return recursiveStairs(n, index + 1) + recursiveStairs(n, index + 2)
         return recursiveStairs(n, 0)
+    
+    def climbStairsIT(self, n: int) -> int:
+        prev1 = 1  # dp[i - 1]
+        prev2 = 1  # dp[i - 2]
 
+        for _ in range(2, n + 1):
+            dp = prev1 + prev2
+            prev2 = prev1
+            prev1 = dp
+
+        return prev1
         
         
 sol = SolutionStairs()
-print(sol.climbStairsDP(4))
+print(sol.climbStairsDP(40))
+print(sol.climbStairsIT(40))
