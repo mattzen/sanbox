@@ -15,7 +15,9 @@ def sliding_window(elements, window_size):
        return elements
     for i in range(len(elements)):
         print(elements[i:i+window_size])  
-        
+
+
+  
 
      
 

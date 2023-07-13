@@ -1,3 +1,6 @@
+import collections
+from typing import List
+
 def SumOfDigits(num : int) -> int:
     num = str(num)
     if len(num) == 1:
@@ -12,6 +15,7 @@ def SumofDigitsIterative(num : int) -> int:
     return holder
 
  #ex 23   
+
 def phoneNumbers(digits):
     d = {
             "2" : "abc",
@@ -35,5 +39,34 @@ def phoneNumbers(digits):
     if(digits):
         backtrack(0, "")
     return result
-                
-                
+       
+       
+class SolutionStairs:         
+    def climbStairsDP(self, n): 
+        lookup = {}
+        def recursiveStairs(n, index):
+            if(index in lookup.keys()):
+                return lookup[index]
+            if(index == n): 
+                return 1
+            if(index > n):
+                return 0
+            for i in range (n):
+                lookup[index] = recursiveStairs(n, index + 1) + recursiveStairs(n, index + 2) + recursiveStairs(n, index + 3) + recursiveStairs(n, index + 4)
+                return lookup[index]
+        return recursiveStairs(n, 0)
+    
+    def climbStairs(self, n): 
+        def recursiveStairs(n, index):
+            if(index == n): 
+                return 1
+            if(index > n):
+                return 0
+            for i in range (n):
+                return recursiveStairs(n, index + 1) + recursiveStairs(n, index + 2)
+        return recursiveStairs(n, 0)
+
+        
+        
+sol = SolutionStairs()
+print(sol.climbStairsDP(4))

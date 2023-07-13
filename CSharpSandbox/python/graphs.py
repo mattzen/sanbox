@@ -58,6 +58,7 @@ class SolutionNumOfIslands:
                     ans += 1
 
         return ans
+    
 
 grid = [
   ["1","1","0","0","0"],
@@ -67,5 +68,5 @@ grid = [
 ]
 
 sol = SolutionNumOfIslands()
-#print(sol.numIslandsDFS(grid))
-print(sol.numIslandsBFS(grid))
+print(sol.numIslandsDFS(grid))
+#print(sol.numIslandsBFS(grid))
