@@ -13,8 +13,8 @@ namespace CSharpSandbox
         static void Main(string[] args)
         {
 
-            Test t = new Test();
-            Console.WriteLine(t.RunTest("test"));
+            SolutionSlidingWindow t = new SolutionSlidingWindow();
+            Console.WriteLine(t.LengthOfLongestSubstring("test"));
 
         /*  Backtracking b = new Backtracking();
             b.CombinationSum();
