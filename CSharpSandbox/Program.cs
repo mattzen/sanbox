@@ -13,21 +13,9 @@ namespace CSharpSandbox
         static void Main(string[] args)
         {
 
-            LeetCode leet = new LeetCode();
 
-            int[] arr1 = new int[] {1,2,3,0,0,0};
-            int[] arr2 = new int[] { 2, 5, 6 };
-
-
-
-            leet.Solution88_1(arr1, 3, arr2, 3);
-
-
-
-            Backtracking b = new Backtracking();
+        /*  Backtracking b = new Backtracking();
             b.CombinationSum();
-
-
             Recursion r = new Recursion();
 
             var count = r.SumUpNumbers2(12345);
@@ -38,47 +26,23 @@ namespace CSharpSandbox
 
             var count2 = r.Sum(l);
 
-            Console.WriteLine(count2);
-            //string text = "    Hello, world!";
+            Console.WriteLine(count2); 
+            string text = "    Hello, world!";
 
-            //Regex regex = new Regex(@"\s+(?=\S)");
-            //MatchCollection matches = regex.Matches(text);
+            Regex regex = new Regex(@"\s+(?=\S)");
+            MatchCollection matches = regex.Matches(text);
 
-            //foreach (Match match in matches)
-            //{
-            //    Console.WriteLine(match.Value);
-            //}
+            foreach (Match match in matches)
+            {
+               Console.WriteLine(match.Value);
+            }
+        */
 
         }
 
     }
 
-
-    public class LeetCode
-    {
-      
-        public void Solution88_1(int[] nums1, int m, int[] nums2, int n)
-        {
-            for (int i = 0; i < nums2.Length; i++)
-            {
-                nums1[i+m] = nums2[i];
-            }
-            Array.Sort(nums1);
-        }
-
-        public void Solution88_2(int[] nums1, int m, int[] nums2, int n)
-        {
-            int[] temp = new int[m + n];
-
-            if(m > n)
-            {
-
-            }
-   
-        }
-
-    }
-
+    
 
 
 
@@ -107,11 +71,11 @@ namespace CSharpSandbox
         }
 
         public string FullName => FirstName + " " + LastName;
-        private string FirstName { get;  set; }
-        private string LastName { get;  set; }
+        private string FirstName { get; set; }
+        private string LastName { get; set; }
 
 
-        
+
     }
 
     public class Dog
@@ -202,7 +166,7 @@ namespace CSharpSandbox
 
     class ExpressionBuilder
     {
-            public void build()
+        public void build()
         {
             ParameterExpression xParameter = Expression.Parameter(typeof(int), "x");
             ParameterExpression yParameter = Expression.Parameter(typeof(int), "y");
@@ -223,12 +187,12 @@ namespace CSharpSandbox
             string uncaptured = "uncaptured local";
             Action<string> action = lambdaParameter =>
             {
-            string lambdaLocal = "lambda local";
-            Console.WriteLine("Instance field: {0}", instanceField);
-            Console.WriteLine("Method parameter: {0}", methodParameter);
-            Console.WriteLine("Method local: {0}", methodLocal); 
-            Console.WriteLine("Lambda parameter: {0}", lambdaParameter);
-            Console.WriteLine("Lambda local: {0}", lambdaLocal);
+                string lambdaLocal = "lambda local";
+                Console.WriteLine("Instance field: {0}", instanceField);
+                Console.WriteLine("Method parameter: {0}", methodParameter);
+                Console.WriteLine("Method local: {0}", methodLocal);
+                Console.WriteLine("Lambda parameter: {0}", lambdaParameter);
+                Console.WriteLine("Lambda local: {0}", lambdaLocal);
             };
             methodLocal = "modified method local";
             return action;
