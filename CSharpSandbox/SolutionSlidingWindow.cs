@@ -37,23 +37,4 @@ namespace CSharpSandbox
             return result;
         }
     }
-
-
-    public class SolutionTwoPointers
-    {
-        public int MaxArea(int[] height)
-        {
-            var result = 0;
-
-
-
-
-
-            return result;
-        }
-    }
-
-
-
-
 }
