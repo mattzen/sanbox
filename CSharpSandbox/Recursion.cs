@@ -3,15 +3,6 @@ namespace CSharpSandbox
 {
     public class Recursion
     {
-
-        public void CalculatePaths()
-        {
-
-
-
-
-        }
-
         public int Sum(List<int> listOfInt)
         {
             if (listOfInt.Count == 1)

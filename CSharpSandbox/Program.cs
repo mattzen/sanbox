@@ -14,7 +14,15 @@ namespace CSharpSandbox
         {
 
             SolutionSlidingWindow t = new SolutionSlidingWindow();
-            Console.WriteLine(t.LengthOfLongestSubstring("test"));
+            Console.WriteLine(t.LengthOfLongestSubstring("tmmzuxt"));
+
+
+
+            SolutionTwoPointers tw = new SolutionTwoPointers();
+            Console.WriteLine(tw.MaxArea(new int[]{1,8,6,2,5,4,8,3,7}));
+
+            
+
 
         /*  Backtracking b = new Backtracking();
             b.CombinationSum();
