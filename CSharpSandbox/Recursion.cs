@@ -40,8 +40,9 @@ namespace CSharpSandbox
     {
         public void CombinationSum()
         {
-            var inputs = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
+            var inputs = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            
             var allSolutions = new List<List<int>>();
 
             SumHelper(inputs, -1, 0, new List<int>(), 15, allSolutions);

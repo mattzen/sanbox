@@ -21,8 +21,7 @@ namespace CSharpSandbox
             SolutionTwoPointers tw = new SolutionTwoPointers();
             Console.WriteLine(tw.MaxArea(new int[]{1,8,6,2,5,4,8,3,7}));
 
-            
-
+        
 
         /*  Backtracking b = new Backtracking();
             b.CombinationSum();
@@ -51,10 +50,6 @@ namespace CSharpSandbox
         }
 
     }
-
-    
-
-
 
     class EntityProcessor<T>
     {

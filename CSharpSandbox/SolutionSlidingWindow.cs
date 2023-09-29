@@ -5,6 +5,9 @@ namespace CSharpSandbox
     {
         public int LengthOfLongestSubstring(string s)
         {
+            
+
+
             var result = 0;
             var left = 0;
             var right = 0;
