@@ -10,3 +10,8 @@ CSharpSandbox/python/__pycache__/recursion.cpython-39.pyc
 CSharpSandbox/python/__pycache__/dog.cpython-39.pyc
 CSharpSandbox/python/__pycache__/majority_element.cpython-39.pyc
 CSharpSandbox/python/__pycache__/other_problems.cpython-39.pyc
+Tests/TestProject1/bin
+Tests/TestProject1/obj
+Tests/.DS_Store
+Tests/TestProject1/.DS_Store
+.DS_Store
